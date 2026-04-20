@@ -32,7 +32,7 @@ class ProfileScreen extends StatelessWidget {
             width: 300,
             padding: const EdgeInsets.all(16),
             child: Column(
-              mainAxisSize: MainAxisSize.min, 
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const CircleAvatar(
                   radius: 60,
@@ -48,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
                   'Flutter Developer',
                   style: TextStyle(fontSize: 16, color: Colors.grey),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 6),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

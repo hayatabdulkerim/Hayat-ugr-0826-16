@@ -89,7 +89,7 @@ class CatalogScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             final product = products[index];
             return Card(
-              color: product.color.withOpacity(0.1), 
+              color: product.color.withOpacity(0.1),
               child: InkWell(
                 onTap: () {
                   ScaffoldMessenger.of(context).showSnackBar(

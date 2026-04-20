@@ -15,20 +15,12 @@ class BottomNavApp extends StatelessWidget {
   }
 }
 
-
-
-
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
-
-
-
-
-
 
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
@@ -52,12 +44,17 @@ class _MainScreenState extends State<MainScreen> {
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home), 
+            label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Favorites',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person), 
+            label: 'Profile'
+            ),
         ],
         currentIndex: _selectedIndex,
         onTap: onItemTapped,
@@ -65,10 +62,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
-
-
-
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -89,10 +82,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-
-
-
-
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
 
@@ -110,11 +99,6 @@ class DetailsScreen extends StatelessWidget {
   }
 }
 
-
-
-
-
-
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
 
@@ -123,9 +107,6 @@ class FavoritesScreen extends StatelessWidget {
     return const Center(child: Text('Your favorite items appear here.'));
   }
 }
-
-
-
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

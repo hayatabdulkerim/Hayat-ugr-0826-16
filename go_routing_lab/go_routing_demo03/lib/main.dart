@@ -47,7 +47,10 @@ class MyApp extends StatelessWidget {
 
 final _router = GoRouter(
   routes: [
-    GoRoute(path: '/', name: 'home', builder: (_, _) => const HomeScreen()),
+    GoRoute(
+      path: '/', 
+      name: 'home', 
+      builder: (_, _) => const HomeScreen()),
     GoRoute(
       path: '/details',
       name: 'details',
@@ -55,3 +58,4 @@ final _router = GoRouter(
     ),
   ],
 );
+cc
