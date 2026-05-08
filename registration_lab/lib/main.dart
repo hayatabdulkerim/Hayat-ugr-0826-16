@@ -24,7 +24,7 @@ class RegistrationScreen extends StatefulWidget {
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _nameController = TextEditingController();
+  final _nameController = TextEditingController(); // gets what the user typed and we can extract values from it like this => content: Text('Welcome, ${_nameController.text}!'),
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
@@ -39,8 +39,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   }
 
   void submitForm() {
-    if (_formKey.currentState!.validate()) {
-      
+    if (_formKey.currentState!.validate()) { // this runs all validators at once and if all return null meaning there are no errors it displays the pop up, if there are any errors the pop up is not shown
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -127,11 +126,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.lock_outline),
                 ),
-                validator: (value) {
+                validator: (value) {  // comes from the TextFormField widget 
                   if (value != _passwordController.text) {
                     return 'Passwords do not match';
                   }
-                  return null;
+                  return null; // no error
                 },
               ),
               const SizedBox(height: 24),

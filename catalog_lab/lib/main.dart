@@ -78,15 +78,15 @@ class CatalogScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Catalog')),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: GridView.builder(
+        child: GridView.builder(  // this creates a scrolable grid. the .builder is efficien in that it biulds the visible parts only
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.75,
+            childAspectRatio: 0.75,   // heignt vs width ratio
             crossAxisSpacing: 8,
             mainAxisSpacing: 8,
           ),
-          itemCount: products.length,
-          itemBuilder: (context, index) {
+          itemCount: products.length, // total products so flutter knows when to stop calling the item builder
+          itemBuilder: (context, index) {   // better than loops in that it only builds what it needs (when its only visible to the screen)
             final product = products[index];
             return Card(
               color: product.color.withOpacity(0.1),
